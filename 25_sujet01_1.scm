@@ -1,6 +1,6 @@
 ; david cobac
 ; juillet 2025
-(define (voisins_entrant grph elt)
+(define (voisins_entrants grph elt)
   (let ((v (vector-map (lambda (lst) (member elt lst)) grph))
 	(L (vector-length grph)))
     (let boucle ((lst '())
@@ -14,5 +14,5 @@
 (let boucle ((lst '(0 1 2)))
   (unless (null? lst)
     (newline)
-    (display (voisins_entrant vgraphe (car lst)))
+    (display (voisins_entrants vgraphe (car lst)))
     (boucle (cdr lst))))
