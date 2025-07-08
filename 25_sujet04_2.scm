@@ -6,10 +6,10 @@
 		 (N n))
       (if (= n 0) liste
 	  (if (< (car liste) (cadr liste))
-	      (begin (cons (car liste)
-			   (boucle (cdr liste) (- n 1))))
-	      (begin (cons (cadr liste)
-			   (boucle (cons (car liste) (cddr liste)) (- n 1)))))))))
+	      (cons (car liste)
+		    (boucle (cdr liste) (- n 1)))
+	      (cons (cadr liste)
+		    (boucle (cons (car liste) (cddr liste)) (- n 1))))))))
 
 (define (tri-bulles lst)
   (let boucle1 ((liste lst)
