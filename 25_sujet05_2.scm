@@ -11,8 +11,9 @@
 ;; 	  (else (cons (car liste) (boucle (cdr liste) (+ 1 indice)))))))
 
 (define (premiers-entiers n)
-  (if (= 1 n) '(0)
-      (append (premiers-entiers (- n 1)) (list (- n 1)))))
+  (let ((prec (- n 1)))
+    (if (= 1 n) '(0)
+	(append (premiers-entiers prec) (list prec)))))
 
 (define (bascule-false lst i)
   (map (lambda (n)
