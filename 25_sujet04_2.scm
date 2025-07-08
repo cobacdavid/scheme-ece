@@ -16,5 +16,3 @@
 ; tests
 (let ((listes '((9 3 7 2 3 1 6) (9 7 4 3))))
       (newline)(write (map tri-bulles listes)))
-      
-(une-etape '(9 3 7 2 3 1 6) 6)
