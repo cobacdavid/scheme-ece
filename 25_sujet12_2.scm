@@ -8,16 +8,8 @@
 	  (else (- (traduire-romain (substring nombre 1)) val0)))))
 
 ; tests
-(define romains
-  (let ((dico (make-hash-table)))
-    (hash-table-set! dico #\I 1)
-    (hash-table-set! dico #\V 5)
-    (hash-table-set! dico #\X 10)
-    (hash-table-set! dico #\L 50)
-    (hash-table-set! dico #\C 100)
-    (hash-table-set! dico #\D 500)
-    (hash-table-set! dico #\M 1000)
-  dico))
+(define romains (alist->hash-table '((#\I . 1) (#\V . 5) (#\X . 10) (#\L . 50)
+				    (#\C . 100) (#\D . 500) (#\M . 1000))))
 
 (let ((nombres '("XIV" "CXLII" "MMXXIV")))
   (newline)(write (map traduire-romain nombres)))
