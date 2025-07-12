@@ -9,12 +9,12 @@
   (let ((L (- (vector-length v) 1)))
     (let boucle ((debut 0)
 		 (fin L))
-      (let* ((m (floor (/ (+ debut fin) 2)))
-	     (elt (vector-ref v m)))
-	(cond ((= elt x) #t)
-	      ((>= debut fin) #f)
-	      ((< elt x) (boucle (+ 1 m) fin))
-	      (else (boucle debut (- m 1))))))))
+      (if (> debut fin) #f
+	  (let* ((m (floor (/ (+ debut fin) 2)))
+		 (elt (vector-ref v m)))
+	    (cond ((= elt x) #t)
+		  ((< elt x) (boucle (+ 1 m) fin))
+		  (else (boucle debut (- m 1)))))))))
 
 ; tests
 (define vect #(15 16 18 19 23 24 28 29 31 33))
