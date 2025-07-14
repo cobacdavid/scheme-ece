@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (recherche-min vct)
   (let ((L (vector-length vct)))
     (let boucle ((n 0)
@@ -11,6 +11,6 @@
 				(if (< elt lemin) (list n elt)
 				    (list indice lemin)))))))))
 
-; tests
+;;; tests
 (let ((vecteurs '(#(5) #(2 4 1) #(5 3 2 2 4) #(-1 -2 -3 -3))))
   (newline)(write (map recherche-min vecteurs)))

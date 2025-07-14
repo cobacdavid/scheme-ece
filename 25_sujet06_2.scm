@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (dico lettre) (+ 1 (- (char->integer lettre) (char->integer #\A))))
 
 (define (codes-parfait s)
@@ -16,6 +16,6 @@
 		  (string-append concat (string codelettre))
 		  (+ indice 1)))))))
 
-; tests
+;;; tests
 (let ((liste '("PAUL" "ALAIN")))
   (newline)(write (map codes-parfait liste)))

@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (ligne-suivante ligne)
   (let ((le-un '(1)))
     (let boucle ((lgn ligne)
@@ -16,7 +16,7 @@
 	(let ((nv-ligne (ligne-suivante dernier)))
 	  (boucle (append triangle (list nv-ligne)) nv-ligne (+ 1 k))))))
 
-; tests
+;;; tests
 (newline)(write (ligne-suivante '(1 3 3 1)))
 (let ((n '(2 3)))
   (newline)(write (map pascal n)))

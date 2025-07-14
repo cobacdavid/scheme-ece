@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (nombre-suivant s)
   (let ((lg (string-length s)))
     (let boucle ((resultat "")
@@ -12,7 +12,7 @@
 	      (boucle resultat i (+ occ 1))
 	      (boucle (string-append resultat occurence nombre) (+ i occ) 1)))))))
 
-; tests
+;;; tests
 (let boucle ((s "1") (n 0))
   (newline)
   (write s)

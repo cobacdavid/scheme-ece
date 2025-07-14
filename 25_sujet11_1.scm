@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (parcours-largeur arbre)
   (let boucle ((resultat '())
 	       (file (list arbre)))
@@ -9,7 +9,7 @@
 		  (set! file (append (cdr file) (list (car elt)) (cddr elt)))
 		  (boucle (append resultat (list (cadr elt))) file))))))
   
-; tests
+;;; tests
 (define arbre-vide '())
 (define (arbre g val d)
   (list g val d))

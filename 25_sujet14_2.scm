@@ -1,5 +1,5 @@
-;david cobac
-; juillet 2025
+;;;david cobac
+;;; juillet 2025
 (define (nombre-lignes image)
   (length image))
 
@@ -20,7 +20,7 @@
 (define (binaire image seuil)
   (traitement image (lambda (n) (if (> n seuil) 255 0))))
 
-; tests
+;;; tests
 (let ((img '((20 34 254 145 6)
 	     (23 124 237 225 69)
 	     (197 174 207 25 87)

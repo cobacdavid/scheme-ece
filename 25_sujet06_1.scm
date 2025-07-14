@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (liste-puissances a n)
   (let boucle ((nb n)
 	       (lst (list a))
@@ -15,7 +15,7 @@
       (if (>= aprec n) lst
 	  (boucle (append lst (list aprec)) aprec)))))
 
-; tests
+;;; tests
 (let ((liste '((3 -2) (5 4))))
   (newline)(write (apply map liste-puissances liste)))
 (let ((liste '((2 2 5) (16 17 5))))

@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 
 ;; premier jet correct mais pas esprit scheme
 ;; (define (bascule-false lst i)
@@ -28,6 +28,6 @@
 		    ((= i n) t)
 		    (else (boucle (+ 1 i) (bascule-false t i))))))))
 
-;tests
+;;;tests
 (let ((liste '(40 5)))
   (newline)(write (map crible liste)))

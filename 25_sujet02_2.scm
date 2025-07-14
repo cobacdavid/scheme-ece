@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (est-un-ordre? lst)
   (let ((L (length lst)))
     (let boucle ((liste lst) (coll '()))
@@ -19,7 +19,7 @@
 		   (+ (if (= (- (abs (- (car liste) prec)) 1) 0) 0 1)
 	     	      (boucle (cdr liste) (car liste))))))))))
 
-; tests
+;;; tests
 (define listes '((1 6 2 8 3 7) (5 4 3 6 7 2 1 8 9) (1 2) (2 1 3 4)))
 (newline)(write (map est-un-ordre? listes))
 (newline)(write (map nombre_points_rupture listes))

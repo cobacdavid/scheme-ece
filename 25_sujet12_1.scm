@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (load "25_sujet07_2")
 
 (let ((listes '(((3 5) (-2 4) (4) () (1 2 3))

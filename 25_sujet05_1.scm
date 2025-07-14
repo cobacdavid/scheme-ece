@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (renverse s)
   (if (string=? s "") ""
       (let* ((L (string-length s))
@@ -11,6 +11,6 @@
 	       (boucle (+ n 1))
 	       (string (string-ref s n))))))))
 
-; tests
+;;; tests
 (let ((chaines '("" "abc" "informatique")))
   (newline)(write (map renverse chaines)))

@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (make-arbre)
   (lambda (etiquette gauche droit)
     (list etiquette gauche droit)))
@@ -12,7 +12,7 @@
   (if (not a) 0
       (+ 1 (taille (cadr a)) (taille (caddr a)))))
 
-; tests
+;;; tests
 (let ((a ((make-arbre) 1
 	  ((make-arbre) 4 #f #f)
 	  ((make-arbre) 0 #f ((make-arbre) 7 #f #f)))))

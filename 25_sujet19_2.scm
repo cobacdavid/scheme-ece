@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (separe vct)
   (let ((L (vector-length vct)))
     (let boucle ((gauche 0)
@@ -13,7 +13,7 @@
 		(boucle gauche (- droite 1))))))))
     vct)
 
-; tests
+;;; tests
 (let ((vecteurs '(#(1 0 1 0 1 0 1 0)
 		  #(1 0 0 0 1 1 0 1 1 0 1 0 1 1 1 0))))
   (newline)(write (map separe vecteurs)))

@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (eleves-du-mois eleves notes)
   (let boucle ((el eleves)
 	       (no notes)
@@ -13,7 +13,7 @@
 	      ((> (car no) n) (boucle rel rno (car no) lcel))
 	      (else (boucle rel rno n e)))))))
 
-; tests
+;;; tests
 (define eleves-nsi '(#\a #\b #\c #\d #\e #\f #\g #\h #\i #\j))
 (define notes-nsi '(30 40 80 60 58 80 75 80 60 24))
 (newline)(display (eleves-du-mois eleves-nsi notes-nsi))

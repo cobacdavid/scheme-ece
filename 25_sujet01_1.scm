@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (voisins_entrants grph elt)
   (let ((v (vector-map (lambda (lst) (member elt lst)) grph))
 	(L (vector-length grph)))
@@ -9,7 +9,7 @@
 	  (if (vector-ref v n) (boucle (cons n lst) (- n 1))
 	      (boucle lst (- n 1)))))))
 
-; tests
+;;; tests
 (define vgraphe #((1 2) (2) (0) (0)))
 (let boucle ((lst '(0 1 2)))
   (unless (null? lst)

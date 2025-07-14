@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (lemax lst)
   (let boucle ((liste (cdr lst)) (max (car lst)) (ind 0) (indiceactu 1))
     (if (null? liste) (cons max ind)
@@ -10,7 +10,7 @@
 	      (boucle reste premier indiceactu suivant)
 	      (boucle reste max ind suivant))))))
 
-; tests
+;;; tests
 (let boucle ((listes '((1 5 6 9 1 2 3 7 9 8) (-2) (-1 -1 3 3 3) (1 1 1 1))))
   (unless (null? listes) 
     (newline)

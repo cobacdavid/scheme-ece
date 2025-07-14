@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (make-pile lst)
   (lambda message
     (case (car message)
@@ -26,7 +26,7 @@
 			(pile 'depiler)
 			(boucle (+ 1 n)))))))))))
 
-;tests
+;;;tests
 (let ((chaines '("((()())(()))" "())(()" "(())(()")))
   (newline) (display (map bon-parenthesage chaines)))
       

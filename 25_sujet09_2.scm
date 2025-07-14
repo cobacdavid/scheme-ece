@@ -1,5 +1,5 @@
-; david cobac
-; juillet 25
+;;; david cobac
+;;; juillet 25
 
 ;; procédure builtin pour faire cette recherche
 ;; (define (dichotomie v x)
@@ -16,7 +16,7 @@
 		  ((< elt x) (boucle (+ 1 m) fin))
 		  (else (boucle debut (- m 1)))))))))
 
-; tests
+;;; tests
 (define vect #(15 16 18 19 23 24 28 29 31 33))
 (let ((liste '(28 27)))
  (newline)(write (map (lambda (n) (dichotomie vect n)) liste)))

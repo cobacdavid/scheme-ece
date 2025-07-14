@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (une-etape lst nb-etapes)
   (let boucle ((liste lst))
     (if (= (length liste) (- (length lst) nb-etapes)) liste
@@ -13,6 +13,6 @@
     (if (= n 0) liste
 	(boucle1 (une-etape liste n) (- n 1)))))
 
-; tests
+;;; tests
 (let ((listes '((9 3 7 2 3 1 6) (9 7 4 3))))
       (newline)(write (map tri-bulles listes)))

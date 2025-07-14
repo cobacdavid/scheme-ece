@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (position-alphabet lettre)
   (- (char->integer lettre) (char->integer #\A)))
 
@@ -20,7 +20,7 @@
 				  (+ (char->integer #\A) (modulo (+ pos decalage) 26)))))
 		 (+ 1 n))))))))
 
-; tests
+;;; tests
 (let ((phrdec '(("BONJOUR A TOUS. VIVE LA MATIERE NSI !" "GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !")
 		 (4 -5))))
   (newline)(display (apply map cesar phrdec)))

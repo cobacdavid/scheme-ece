@@ -1,5 +1,5 @@
-; david cobac
-; juillet 25
+;;; david cobac
+;;; juillet 25
 (define (dichotomie v x)
   (let ((L (- (vector-length v) 1)))
     (let boucle ((debut 0)
@@ -11,6 +11,6 @@
 	      ((< elt x) (boucle (+ 1 m) fin))
 	      (else (boucle debut (- m 1))))))))
 
-; tests
+;;; tests
 (let ((vecteurs '(#(2 3 4 5 6) #(2 3 4 6 7))))
   (newline)(write (map (lambda (v) (dichotomie v 5)) vecteurs)))

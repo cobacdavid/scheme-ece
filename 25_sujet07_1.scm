@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (nbr-occurrences chaine)
   (let ((dico (make-hash-table))
 	(L (string-length chaine)))
@@ -11,5 +11,5 @@
 		(hash-table-set! dico char (+ 1 (hash-table-ref dico char))))
 	    (boucle (+ 1 n)))))))
 
-; tests
+;;; tests
 (newline)(display (hash-table->alist (nbr-occurrences "Hello world !")))

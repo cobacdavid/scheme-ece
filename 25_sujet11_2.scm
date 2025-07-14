@@ -1,5 +1,5 @@
-; david cobac
-; juillet 2025
+;;; david cobac
+;;; juillet 2025
 (define (somme-max lst)
   (let* ((L (length lst))
 	 (sommes-max (make-vector L)))
@@ -21,6 +21,6 @@
 		  (if (> (vector-ref sommes-max n)
 			 (vector-ref sommes-max maximum)) n maximum))))))
 
-; tests
+;;; tests
 (let ((listes '((1 2 3 4 5) (1 2 -3 4 5) (1 2 -2 4 5) (1 -2 3 10 -4 7 2 -5))))
   (newline) (write (map somme-max listes)))
