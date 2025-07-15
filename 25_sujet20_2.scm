@@ -12,14 +12,14 @@
 (define (make-paquet-de-cartes)
   (let ((contenu (make-vector 52)))
     (let boucle ((c 0))
-      (if (= c 4) #f
-	  (begin
-	    (let boucle2 ((v 0))
-	      (if (= v 13) #f
-		  (begin
-		    (vector-set! contenu (+ v (* 13 c)) (make-carte (+ 1 c) (+ 1 v)))
-		    (boucle2 (+ 1 v)))))
-	    (boucle (+ 1 c)))))
+      (unless (= c 4)
+	(let boucle2 ((v 0))
+	  (unless (= v 13)
+	    (vector-set! contenu
+			 (+ v (* 13 c))
+			 (make-carte (+ 1 c) (+ 1 v)))
+	    (boucle2 (+ 1 v))))
+	(boucle (+ 1 c))))
     (lambda message
       (case (car message)
 	((recuperer-carte)
@@ -32,9 +32,11 @@
 (define (sortie n)
   (let* ((jeu (make-paquet-de-cartes))
 	 (carte (jeu 'recuperer-carte n)))
-    (newline) (display (carte 'recuperer-valeur))
-    (display " de ") (display (carte 'recuperer-couleur))))
+    (newline) (display (string-append
+			(carte 'recuperer-valeur)
+			" de "
+			(carte 'recuperer-couleur)))))
 
 (sortie 20)
 (sortie 0)
-(sortie 52)  
+(sortie 52)
