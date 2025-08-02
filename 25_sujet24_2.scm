@@ -10,13 +10,13 @@
         (parcours (caddr arbre) liste))))
 
 (define (insere arbre cle)
-  (if (null? arbre) (make-noeud cle '() '())
-      (if (< cle (car arbre)) (make-noeud (car arbre)
-					  (insere (cadr arbre) cle)
-					  (caddr arbre)) 
-	  (make-noeud (car arbre)
-		      (cadr arbre)
-		      (insere (caddr arbre) cle)))))
+  (cond ((null? arbre) (make-noeud cle '() '()))
+	((< cle (car arbre)) (make-noeud (car arbre)
+					 (insere (cadr arbre) cle)
+					 (caddr arbre)))
+	(else (make-noeud (car arbre)
+			  (cadr arbre)
+			  (insere (caddr arbre) cle)))))
 
 ;;; tests
 (define arbre (make-noeud 5
